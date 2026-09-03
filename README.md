@@ -18,18 +18,25 @@ static file server (e.g. `python3 -m http.server`).
 
 ## Before launch, replace these placeholders
 
-1. **Contact info** — `hello@example.com` and `(555) 555-5555` appear in the
-   footer of every page and in `booking.html`. Find-and-replace with the real
-   email/phone.
-2. **Booking form endpoint** — In `booking.html`, the form posts to
+1. **Booking form endpoint** — In `booking.html`, the form posts to
    `https://formspree.io/f/YOUR_FORM_ID`. Create a free form at
    [formspree.io](https://formspree.io) and swap in the real endpoint.
-3. **About page bio/photo** — `about.html` has placeholder bio text and a
+2. **About page bio/photo** — `about.html` has placeholder bio text and a
    placeholder portrait box; replace with a real photo and bio.
-4. **Testimonial** — `index.html` has a placeholder testimonial quote.
-5. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
-6. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
+3. **Testimonial** — `index.html` has a placeholder testimonial quote.
+4. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
+5. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
    process, and date-change policy should reflect actual policy.
+
+## Contact info
+
+The site currently shows email only (`admin@egweds.com`) — no phone number is
+displayed, by design. The booking form still asks *couples* for their phone
+number so you can call them back; that's separate from a public business
+line. If you want a phone number listed later without exposing a personal
+cell, a free [Google Voice](https://voice.google.com) number is a common,
+zero-cost option — it forwards to your real phone but keeps the number
+separate and screenable.
 
 ## Deploying
 

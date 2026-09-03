@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (statusEl) {
             statusEl.className = "form-status is-visible error";
             statusEl.textContent =
-              "Something went wrong sending your inquiry. Please email hello@example.com directly.";
+              "Something went wrong sending your inquiry. Please email admin@egweds.com directly.";
           }
         });
     });
