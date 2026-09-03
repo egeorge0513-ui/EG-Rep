@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Now | Emma George Weddings</title>
+<meta name="description" content="Check availability and send a wedding officiant inquiry to Emma George Weddings, serving New York and New Jersey." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">Emma George <strong>Weddings</strong></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="booking.html" class="btn btn-primary" aria-current="page">Book Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Book Now</p>
+      <h1>Let's see if your date is open</h1>
+      <p class="lede">Share a few details about your wedding and I'll follow up within 1–2 business days to talk next steps.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="booking-layout">
+
+        <div class="booking-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-line"><strong>Email</strong><a href="mailto:hello@example.com">hello@example.com</a></div>
+          <div class="contact-line"><strong>Phone</strong><a href="tel:+15555555555">(555) 555-5555</a></div>
+          <div class="contact-line"><strong>Serving</strong><span>New York &amp; New Jersey</span></div>
+
+          <h3>What Happens Next</h3>
+          <p>After you submit an inquiry, I'll check availability for your date and reply
+             with next steps — usually within 1–2 business days. From there we'll set up
+             an initial planning consultation.</p>
+
+          <div class="placeholder-note">
+            <strong>Setup note:</strong> This form currently posts to a placeholder
+            Formspree endpoint. Create a free account at
+            <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>,
+            create a form, and replace <code>YOUR_FORM_ID</code> in
+            <code>booking.html</code> with your real form ID before launch. Also swap the
+            placeholder email/phone throughout the site.
+          </div>
+        </div>
+
+        <form class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New wedding inquiry — Emma George Weddings" />
+
+          <div class="form-row">
+            <div class="field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="First Name" required />
+            </div>
+            <div class="field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="Last Name" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="Phone" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="wedding-date">Wedding Date</label>
+              <input type="text" id="wedding-date" name="Wedding Date" placeholder="Select a date" required />
+            </div>
+            <div class="field">
+              <label for="location">Venue / Location</label>
+              <input type="text" id="location" name="Venue / Location" placeholder="City or venue name" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="tier">Interested Tier</label>
+              <select id="tier" name="Interested Tier">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Basic ($250-300)">Basic ($250&ndash;300)</option>
+                <option value="Mid-Range ($450-500)">Mid-Range ($450&ndash;500)</option>
+                <option value="Premium ($700+)">Premium ($700+)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="style">Ceremony Style</label>
+              <select id="style" name="Ceremony Style">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Secular">Secular</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="Traditional">Traditional</option>
+                <option value="Blend of styles">Blend of styles</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell Me About Your Day</label>
+            <textarea id="message" name="Message" placeholder="Guest count, vibe you're going for, anything else I should know..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          <p class="form-status" role="status"></p>
+
+          <p class="field-note">By submitting, you agree to be contacted by Emma George Weddings about your inquiry. No spam, ever.</p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Emma George Weddings</div>
+        <p>Personalized wedding ceremonies for couples across New York &amp; New Jersey.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="tel:+15555555555">(555) 555-5555</a></li>
+          <li>Serving NY &amp; NJ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Emma George Weddings. All rights reserved.</span>
+      <span>Placeholder contact info — update before launch.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
