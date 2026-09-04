@@ -6,9 +6,8 @@
 
 :root {
   --color-bg: #f8f4ee;         /* ivory */
-  --color-blush: #efcfd9;      /* blush pink */
-  --color-green: #4a5a3c;      /* leaf green */
-  --color-greige: #dad4c7;     /* warm greige */
+  --color-accent: #c7d9bc;     /* pastel green accent */
+  --color-greige: #dad4c7;     /* warm cream/greige */
   --color-black: #0b0b0a;      /* near-black */
 
   --color-text: #201f1c;
@@ -84,7 +83,7 @@ p { margin: 0 0 1.2em; }
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-green);
+  color: var(--color-text);
   margin-bottom: 1.1em;
 }
 
@@ -112,8 +111,7 @@ p { margin: 0 0 1.2em; }
 }
 
 .text-link:hover {
-  color: var(--color-green);
-  border-color: var(--color-green);
+  border-color: var(--color-accent);
 }
 
 .text-link.on-dark {
@@ -122,13 +120,13 @@ p { margin: 0 0 1.2em; }
 }
 
 .text-link.on-dark:hover {
-  color: var(--color-blush);
-  border-color: var(--color-blush);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .text-link.accent {
-  color: var(--color-green);
-  border-color: var(--color-green);
+  color: var(--color-text);
+  border-color: var(--color-accent);
 }
 
 /* ---------- Header / Nav ---------- */
@@ -160,7 +158,7 @@ p { margin: 0 0 1.2em; }
 
 .brand strong {
   font-weight: 400;
-  color: var(--color-green);
+  color: var(--color-text);
 }
 
 .nav-links {
@@ -188,13 +186,13 @@ p { margin: 0 0 1.2em; }
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
-  color: var(--color-green);
-  border-color: var(--color-green);
+  color: var(--color-text);
+  border-color: var(--color-accent);
 }
 
 .nav-links .nav-cta {
-  color: var(--color-green);
-  border-color: var(--color-green);
+  color: var(--color-text);
+  border-color: var(--color-accent);
 }
 
 .nav-toggle {
@@ -354,7 +352,7 @@ p { margin: 0 0 1.2em; }
 }
 
 .page-hero h1 {
-  color: var(--color-green);
+  color: var(--color-text);
 }
 
 /* ---------- Sections ---------- */
@@ -488,7 +486,7 @@ section.tight {
   display: block;
   font-family: var(--font-display);
   font-size: 1.3rem;
-  color: var(--color-green);
+  color: var(--color-text);
   letter-spacing: 2px;
   margin-bottom: 0.7rem;
 }
@@ -522,7 +520,7 @@ section.tight {
 .values-list .num {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  color: var(--color-green);
+  color: var(--color-text);
 }
 
 .values-list strong {
@@ -553,7 +551,7 @@ section.tight {
 }
 
 .price-card.is-featured {
-  background: var(--color-blush);
+  background: var(--color-accent);
 }
 
 .price-card .badge {
@@ -561,7 +559,7 @@ section.tight {
   font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--color-green);
+  color: var(--color-text);
   margin-bottom: 1.2rem;
 }
 
@@ -573,7 +571,7 @@ section.tight {
   font-family: var(--font-display);
   font-size: 1.9rem;
   letter-spacing: 2px;
-  color: var(--color-green);
+  color: var(--color-text);
   margin-bottom: 1.6rem;
 }
 
@@ -617,7 +615,7 @@ section.tight {
   letter-spacing: 0.5px;
   text-transform: none;
   margin: 0 0 1.4rem;
-  color: var(--color-green);
+  color: var(--color-text);
   line-height: 1.4;
 }
 
@@ -669,7 +667,7 @@ section.tight {
 .faq-question .icon::after {
   content: "";
   position: absolute;
-  background: var(--color-green);
+  background: var(--color-text);
   transition: transform 0.25s ease;
 }
 
@@ -793,7 +791,7 @@ form.booking-form {
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--color-green);
+  border-color: var(--color-accent);
 }
 
 .field textarea {
@@ -818,13 +816,13 @@ form.booking-form {
   display: block;
 }
 
-.form-status.success { color: var(--color-green); }
+.form-status.success { color: var(--color-text); }
 .form-status.error { color: #a8433c; }
 
 .submit-link {
   background: none;
   border: none;
-  border-bottom: 1px solid var(--color-green);
+  border-bottom: 1px solid var(--color-accent);
   cursor: pointer;
   font-family: var(--font-label);
 }
@@ -832,16 +830,16 @@ form.booking-form {
 /* flatpickr theming */
 .flatpickr-day.selected,
 .flatpickr-day.selected:hover {
-  background: var(--color-green) !important;
-  border-color: var(--color-green) !important;
+  background: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
 }
 
 .flatpickr-day.today {
-  border-color: var(--color-green);
+  border-color: var(--color-accent);
 }
 
 .flatpickr-day:hover {
-  background: var(--color-blush) !important;
+  background: var(--color-accent) !important;
 }
 
 .flatpickr-months .flatpickr-month,
@@ -878,7 +876,7 @@ span.flatpickr-weekday {
   font-size: 0.85rem;
   padding: 1em 1.2em;
   margin-top: 1.4rem;
-  border-left: 2px solid var(--color-green);
+  border-left: 2px solid var(--color-accent);
 }
 
 .placeholder-note a {
@@ -946,7 +944,7 @@ span.flatpickr-weekday {
 }
 
 .footer-links a:hover {
-  color: var(--color-blush);
+  color: var(--color-accent);
 }
 
 .footer-bottom {
@@ -1009,7 +1007,7 @@ html.gate-unlocked #site-gate {
 
 .gate-form input[type="password"]:focus {
   outline: none;
-  border-color: var(--color-green);
+  border-color: var(--color-accent);
 }
 
 .gate-form .form-status {
