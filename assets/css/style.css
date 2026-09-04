@@ -149,6 +149,7 @@ p { margin: 0 0 1.2em; }
 }
 
 .brand {
+  order: 1;
   font-family: var(--font-display);
   font-size: 1.15rem;
   text-transform: uppercase;
@@ -163,6 +164,7 @@ p { margin: 0 0 1.2em; }
 }
 
 .nav-links {
+  order: 0;
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -226,7 +228,12 @@ p { margin: 0 0 1.2em; }
 
 @media (max-width: 860px) {
   .nav-toggle {
+    order: 1;
     display: block;
+  }
+
+  .brand {
+    order: 0;
   }
 
   .nav-links {
