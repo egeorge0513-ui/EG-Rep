@@ -223,6 +223,10 @@ p { margin: 0 0 1.2em; }
   border-color: transparent;
 }
 
+.nav-links a.nav-cta[aria-current="page"] {
+  border-color: var(--color-accent);
+}
+
 .nav-toggle {
   display: none;
   background: none;
