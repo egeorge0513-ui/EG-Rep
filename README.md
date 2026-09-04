@@ -23,8 +23,10 @@ static file server (e.g. `python3 -m http.server`).
 
 Vogue-inspired editorial look: `GFS Didot` for headlines (uppercase, wide
 letter-spacing, single weight) paired with `Archivo` for nav/labels/body
-copy, plus `Cormorant Garamond` italic for testimonial quotes — all three
-self-hosted as local `.woff2` files (no external font CDN).
+copy, both self-hosted as local `.woff2` files (no external font CDN).
+`Cormorant Garamond` italic is also self-hosted (`--font-quote`) for
+editorial pull-quotes, but nothing currently uses it — the homepage
+testimonial section it was added for was later removed.
 Palette is ivory/black/white/cream — near-black (`#0b0b0a`) for all text,
 blush pink (`#efcfd9`) as the one interactive accent color (hover states,
 the Book Now nav item, the featured pricing tier fill), warm cream/greige
@@ -44,13 +46,10 @@ photo has a bottom-heavy dark gradient with bottom-right-aligned white text.
 2. **About page bio/photo** — `about.html` has placeholder bio text; the
    headshot thumbnail is a low-resolution placeholder (172×186px source) —
    swap in a higher-res photo when available.
-3. **Testimonials** — `index.html`'s "Kind Words" section has 3 placeholder
-   quotes with bracketed attributions (`[Month Year]`, `[Venue Name]`);
-   swap in real client quotes and names before launch.
-4. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
-5. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
+3. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
+4. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
    process, and date-change policy should reflect actual policy.
-6. **Instagram / WeddingWire links** — footer links on every page currently
+5. **Instagram / WeddingWire links** — footer links on every page currently
    point to `#`; swap in the real profile URLs.
 
 ## Contact info
