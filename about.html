@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>
+  try {
+    if (localStorage.getItem("egw-unlocked") === "1") {
+      document.documentElement.classList.add("gate-unlocked");
+    }
+  } catch (e) {}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About Emma | Emma George Weddings</title>
 <meta name="description" content="Meet Emma George, a Hoboken/NYC metro wedding officiant focused on writing personal, heartfelt ceremonies." />
@@ -11,6 +18,17 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+<div id="site-gate" class="site-gate">
+  <form id="gate-form" class="gate-form">
+    <p class="eyebrow">Emma George Weddings</p>
+    <h1 style="font-size:1.6rem;">This Site Is Private</h1>
+    <p class="lede" style="margin:0 auto;">Enter the password to continue.</p>
+    <input type="password" id="gate-password" placeholder="Password" autocomplete="off" required />
+    <button type="submit" class="text-link accent">Enter</button>
+    <p id="gate-error" class="form-status error">Incorrect password — try again.</p>
+  </form>
+</div>
 
 <header class="site-header">
   <nav class="nav container">

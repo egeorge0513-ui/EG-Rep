@@ -33,8 +33,9 @@ except the pricing tier cards, where the featured tier gets a blush fill.
 1. **Booking form endpoint** — In `booking.html`, the form posts to
    `https://formspree.io/f/YOUR_FORM_ID`. Create a free form at
    [formspree.io](https://formspree.io) and swap in the real endpoint.
-2. **About page bio/photo** — `about.html` has placeholder bio text and a
-   placeholder portrait box; replace with a real photo and bio.
+2. **About page bio/photo** — `about.html` has placeholder bio text; the
+   headshot thumbnail is a low-resolution placeholder (172×186px source) —
+   swap in a higher-res photo when available.
 3. **Testimonial** — `index.html` has a placeholder testimonial quote.
 4. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
 5. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
@@ -54,6 +55,23 @@ line. If you want a phone number listed later without exposing a personal
 cell, a free [Google Voice](https://voice.google.com) number is a common,
 zero-cost option — it forwards to your real phone but keeps the number
 separate and screenable.
+
+## Password gate
+
+The whole site is currently behind a client-side password screen
+(password: `lily`, set in `assets/js/main.js` as `SITE_GATE_PASSWORD`).
+**This is not real security** — the password is visible to anyone who
+views the page source or network requests, since GitHub Pages' free tier
+has no server-side auth. It's meant only to keep casual visitors out
+while the site is still in progress.
+
+- To change the password: edit `SITE_GATE_PASSWORD` in `assets/js/main.js`.
+- To remove the gate entirely: delete the `#site-gate` block from the top
+  of `<body>` in each HTML file, the inline unlock-check `<script>` in
+  each `<head>`, the "Site password gate" CSS block at the end of
+  `style.css`, and the gate-handling code at the top of `main.js`.
+- Once entered, the password is remembered via `localStorage` (per
+  browser), so returning visitors won't be asked again on that device.
 
 ## Deploying
 

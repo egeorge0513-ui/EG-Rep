@@ -1,6 +1,31 @@
 // Emma George Weddings — shared site behavior
 
+var SITE_GATE_PASSWORD = "lily";
+var SITE_GATE_STORAGE_KEY = "egw-unlocked";
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Site password gate
+  var gateForm = document.querySelector("#gate-form");
+  if (gateForm) {
+    var gateInput = document.querySelector("#gate-password");
+    var gateError = document.querySelector("#gate-error");
+    gateForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (gateInput.value.trim().toLowerCase() === SITE_GATE_PASSWORD) {
+        try {
+          localStorage.setItem(SITE_GATE_STORAGE_KEY, "1");
+        } catch (err) {
+          /* storage unavailable — still unlock for this page view */
+        }
+        document.documentElement.classList.add("gate-unlocked");
+      } else {
+        gateError.style.display = "block";
+        gateInput.value = "";
+        gateInput.focus();
+      }
+    });
+  }
+
   // Footer year
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
