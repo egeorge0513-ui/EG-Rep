@@ -213,9 +213,14 @@ p { margin: 0 0 1.2em; }
   border-color: var(--color-accent);
 }
 
-.nav-links .nav-cta {
+.nav-links a.nav-cta {
   color: var(--color-text);
-  border-color: var(--color-accent);
+  font-weight: 700;
+  border-color: transparent;
+}
+
+.nav-links a.nav-cta:hover {
+  border-color: transparent;
 }
 
 .nav-toggle {
