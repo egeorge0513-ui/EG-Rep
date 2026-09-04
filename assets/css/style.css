@@ -30,6 +30,14 @@
   src: url("../fonts/archivo-latin.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/cormorant-garamond-italic.woff2") format("woff2");
+}
+
 :root {
   --color-bg: #f8f4ee;         /* ivory */
   --color-accent: #efcfd9;     /* blush pink — interactive accent */
@@ -42,6 +50,7 @@
 
   --font-display: "GFS Didot", "Times New Roman", Didot, Georgia, serif;
   --font-label: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-quote: "Cormorant Garamond", "Times New Roman", Georgia, serif;
 
   --max-width: 1320px;
   --radius: 1px;
@@ -633,6 +642,39 @@ section.tight {
   font-size: 0.92rem;
   padding-top: 2rem;
   border-top: 1px solid var(--color-greige);
+}
+
+/* ---------- Testimonial grid (homepage "Kind Words") ---------- */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+
+.testimonial-card blockquote {
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  letter-spacing: 0.2px;
+  margin: 0 0 1.2rem;
+  color: var(--color-text);
+}
+
+.testimonial-card cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
 }
 
 /* ---------- Testimonial (editorial pull quote) ---------- */
