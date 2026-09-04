@@ -523,6 +523,10 @@ section.tight {
   .feature-list { grid-template-columns: 1fr; }
 }
 
+.feature-list-cta {
+  margin: 3rem 0 0;
+}
+
 .feature-item .num {
   display: block;
   font-family: var(--font-display);
