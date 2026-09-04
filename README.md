@@ -12,6 +12,7 @@ Static website for Emma George Weddings, a wedding officiant serving NY/NJ.
 - `assets/css/style.css` — Site styles
 - `assets/js/main.js` — Nav toggle, FAQ accordion, date picker init, form submit
 - `assets/vendor/flatpickr/` — Self-hosted date picker library (no CDN dependency)
+- `assets/fonts/` — Self-hosted GFS Didot + Archivo (no Google Fonts CDN dependency)
 - `assets/img/hero-lily.jpg` — Hero background photo
 
 No build step — open `index.html` directly, or serve the folder with any
@@ -21,12 +22,17 @@ static file server (e.g. `python3 -m http.server`).
 
 Vogue-inspired editorial look: `GFS Didot` for headlines (uppercase, wide
 letter-spacing, single weight) paired with `Archivo` for nav/labels/body
-copy, both loaded from Google Fonts. Palette is lily-derived — ivory
-background, blush pink accent, leaf green for headline/key text, warm
-greige for dividers, near-black for the dark sections and footer. Layout
-favors asymmetric splits and thin 1px dividers over boxed/centered
-sections; CTAs are underlined text links rather than filled buttons,
-except the pricing tier cards, where the featured tier gets a blush fill.
+copy, both self-hosted as local `.woff2` files (no external font CDN).
+Palette is ivory/black/white/cream — near-black (`#0b0b0a`) for all text,
+blush pink (`#efcfd9`) as the one interactive accent color (hover states,
+the Book Now nav item, the featured pricing tier fill), warm cream/greige
+for dividers. Leaf green (`#4a5a3c`) is defined as a CSS variable
+(`--color-green`) but currently unused — reserved only for small non-text
+accents if ever needed, never for headlines/nav/body text. Layout favors
+asymmetric splits and thin 1px dividers over boxed/centered sections;
+CTAs are underlined text links rather than filled buttons, except the
+pricing tier cards, where the featured tier gets a blush fill. The hero
+photo has a bottom-heavy dark gradient with bottom-right-aligned white text.
 
 ## Before launch, replace these placeholders
 

@@ -4,13 +4,40 @@
    lily-derived palette, asymmetric magazine layout.
    =========================================================== */
 
+/* Self-hosted fonts (no external CDN dependency) */
+
+@font-face {
+  font-family: "GFS Didot";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/gfs-didot-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/archivo-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/archivo-latin.woff2") format("woff2");
+}
+
 :root {
   --color-bg: #f8f4ee;         /* ivory */
-  --color-accent: #c7d9bc;     /* pastel green accent */
+  --color-accent: #efcfd9;     /* blush pink — interactive accent */
+  --color-green: #4a5a3c;      /* leaf green — small non-text accents only */
   --color-greige: #dad4c7;     /* warm cream/greige */
   --color-black: #0b0b0a;      /* near-black */
 
-  --color-text: #201f1c;
+  --color-text: #0b0b0a;
   --color-text-soft: #5c584f;
 
   --font-display: "GFS Didot", "Times New Roman", Didot, Georgia, serif;
@@ -134,7 +161,7 @@ p { margin: 0 0 1.2em; }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   background: rgba(248, 244, 238, 0.94);
   border-bottom: 1px solid var(--color-greige);
 }
@@ -143,7 +170,8 @@ p { margin: 0 0 1.2em; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
 .brand {
@@ -153,11 +181,6 @@ p { margin: 0 0 1.2em; }
   text-transform: uppercase;
   letter-spacing: 3px;
   text-decoration: none;
-  color: var(--color-text);
-}
-
-.brand strong {
-  font-weight: 400;
   color: var(--color-text);
 }
 
@@ -224,7 +247,7 @@ p { margin: 0 0 1.2em; }
 .nav-toggle span::before { top: -7px; }
 .nav-toggle span::after { top: 7px; }
 
-@media (max-width: 860px) {
+@media (max-width: 980px) {
   .nav-toggle {
     order: 1;
     display: block;
@@ -271,7 +294,7 @@ p { margin: 0 0 1.2em; }
   position: relative;
   min-height: 86vh;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   overflow: hidden;
   background-color: var(--color-black);
 }
@@ -287,10 +310,9 @@ p { margin: 0 0 1.2em; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(248, 244, 238, 0.82) 0%,
-    rgba(248, 244, 238, 0.45) 30%,
-    rgba(248, 244, 238, 0) 55%
+    180deg,
+    rgba(11, 11, 10, 0) 0%,
+    rgba(11, 11, 10, 0.65) 100%
   );
 }
 
@@ -299,11 +321,11 @@ p { margin: 0 0 1.2em; }
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-  padding: 40px 40px 0;
+  padding: 0 40px 48px;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
-  color: var(--color-black);
+  color: #fff;
 }
 
 .hero-text {
@@ -323,13 +345,14 @@ p { margin: 0 0 1.2em; }
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: #fff;
   margin-bottom: 1.2em;
 }
 
 .hero-content h1 {
-  color: var(--color-black);
-  font-size: clamp(2.4rem, 6vw, 3rem);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 5rem);
   letter-spacing: 6px;
   margin-bottom: 0.35em;
 }
@@ -340,7 +363,7 @@ p { margin: 0 0 1.2em; }
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: #fff;
   margin-bottom: 1.8em;
 }
 
