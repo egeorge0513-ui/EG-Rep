@@ -12,9 +12,21 @@ Static website for Emma George Weddings, a wedding officiant serving NY/NJ.
 - `assets/css/style.css` — Site styles
 - `assets/js/main.js` — Nav toggle, FAQ accordion, date picker init, form submit
 - `assets/vendor/flatpickr/` — Self-hosted date picker library (no CDN dependency)
+- `assets/img/hero-lily.jpg` — Hero background photo
 
 No build step — open `index.html` directly, or serve the folder with any
 static file server (e.g. `python3 -m http.server`).
+
+## Design system
+
+Vogue-inspired editorial look: `GFS Didot` for headlines (uppercase, wide
+letter-spacing, single weight) paired with `Archivo` for nav/labels/body
+copy, both loaded from Google Fonts. Palette is lily-derived — ivory
+background, blush pink accent, leaf green for headline/key text, warm
+greige for dividers, near-black for the dark sections and footer. Layout
+favors asymmetric splits and thin 1px dividers over boxed/centered
+sections; CTAs are underlined text links rather than filled buttons,
+except the pricing tier cards, where the featured tier gets a blush fill.
 
 ## Before launch, replace these placeholders
 
@@ -27,6 +39,11 @@ static file server (e.g. `python3 -m http.server`).
 4. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
 5. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
    process, and date-change policy should reflect actual policy.
+6. **Instagram / WeddingWire links** — footer links on every page currently
+   point to `#`; swap in the real profile URLs.
+7. **Homepage split-section images** — `index.html` has two more portrait
+   placeholder boxes (in the "why couples choose Emma" and pricing teaser
+   sections) beyond the About page photo.
 
 ## Contact info
 
