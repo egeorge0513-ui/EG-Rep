@@ -266,7 +266,7 @@ p { margin: 0 0 1.2em; }
   position: relative;
   min-height: 86vh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow: hidden;
   background-color: var(--color-black);
 }
@@ -276,29 +276,27 @@ p { margin: 0 0 1.2em; }
   inset: 0;
   background-size: cover;
   background-position: center 30%;
-  filter: blur(2px);
-  transform: scale(1.03);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(11, 11, 10, 0.72) 0%,
-    rgba(11, 11, 10, 0.4) 38%,
-    rgba(11, 11, 10, 0) 72%
+    to bottom,
+    rgba(248, 244, 238, 0.82) 0%,
+    rgba(248, 244, 238, 0.45) 30%,
+    rgba(248, 244, 238, 0) 55%
   );
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 0 40px 72px;
+  padding: 96px 40px 0;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
-  color: #fff;
+  color: var(--color-black);
 }
 
 .hero-label {
@@ -307,13 +305,12 @@ p { margin: 0 0 1.2em; }
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-black);
   margin-bottom: 1.2em;
-  opacity: 0.92;
 }
 
 .hero-content h1 {
-  color: #fff;
+  color: var(--color-black);
   font-size: clamp(2.4rem, 6vw, 3rem);
   letter-spacing: 6px;
   margin-bottom: 0.35em;
@@ -325,8 +322,7 @@ p { margin: 0 0 1.2em; }
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #fff;
-  opacity: 0.92;
+  color: var(--color-black);
   margin-bottom: 1.8em;
 }
 
