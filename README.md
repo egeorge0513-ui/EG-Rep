@@ -49,8 +49,10 @@ photo has a bottom-heavy dark gradient with bottom-right-aligned white text.
 3. **Travel radius** — `services.html` Premium tier has `[XX] miles` to fill in.
 4. **FAQ answers** marked `[Placeholder]` — booking lead time, payment/deposit
    process, and date-change policy should reflect actual policy.
-5. **Instagram / WeddingWire links** — footer links on every page currently
-   point to `#`; swap in the real profile URLs.
+
+The footer is intentionally minimal (brand, tagline, contact email, copyright)
+with no nav links or social links — add those back in `site-footer` across
+all 5 HTML files if wanted later.
 
 ## Contact info
 
