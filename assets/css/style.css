@@ -292,11 +292,24 @@ p { margin: 0 0 1.2em; }
 .hero-content {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
   padding: 96px 40px 0;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
   color: var(--color-black);
+}
+
+.hero-text {
+  max-width: 480px;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .hero-text {
+    max-width: 100%;
+  }
 }
 
 .hero-label {
@@ -426,6 +439,30 @@ section.tight {
   text-transform: uppercase;
   text-align: center;
   padding: 2rem;
+}
+
+.thumb-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.thumb-wrap .thumb-photo {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-greige);
+}
+
+.thumb-note {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: none;
+  color: var(--color-text-soft);
+  max-width: 220px;
 }
 
 /* ---------- Numbered feature list (replaces icon grid) ---------- */
